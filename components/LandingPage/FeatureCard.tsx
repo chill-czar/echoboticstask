@@ -14,25 +14,22 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <div className="relative w-[304px] h-[204px] bg-transparent flex flex-col justify-start">
-      {/* Left Line */}
-      <div className="absolute -left-[50%] top-1/2 -translate-y-1/2 w-[50px] border border-[#EC4E02]/40 rotate-90"></div>
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full w-[50px] border border-[var(--color-border-subtle)] rotate-90"></div>
 
       <div className="flex flex-col gap-4">
-        {/* Icon */}
-        <div className="w-[60px] h-[60px] bg-[rgba(236,78,2,0.3)] border border-[#EC4E02] rounded-[10px] flex items-center justify-center">
+        <div className="w-[60px] h-[60px] bg-[var(--color-bg-overlay)] border border-[var(--color-border-primary)] rounded-[10px] flex items-center justify-center">
           <Image
             src={icon}
             alt={title}
-            className="w-[40px] h-[40px] object-contain"
+            className="w-[40px] h-[40px] object-contain brightness-0 invert"
           />
         </div>
 
-        {/* Text Content */}
         <div>
           <h2 className="text-[22px] text-white font-gilroy-bold mb-2">
             {title}
           </h2>
-          <p className="text-[#808080] text-[16px] leading-[22px] font-gilroy-light">
+          <p className="text-[var(--color-text-tertiary)] text-[16px] leading-[22px] font-gilroy-light">
             {description}
           </p>
         </div>

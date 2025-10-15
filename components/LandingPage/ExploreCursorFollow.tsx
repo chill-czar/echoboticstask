@@ -64,7 +64,7 @@ const ExploreCursorFollow: React.FC = () => {
       className="fixed pointer-events-none w-[190px] h-[190px] -translate-x-1/2 -translate-y-1/2"
       style={{ left: position.x, top: position.y, zIndex: 9999 }}
     >
-      <div className="relative flex items-center justify-center w-full h-full rounded-full bg-[#EC4E02]">
+      <div className="relative flex items-center justify-center w-full h-full rounded-full bg-[var(--color-primary)]">
         {/* Arrow */}
         <div
           className="absolute w-[50px] h-[50px] flex items-center justify-center transition-transform duration-100"

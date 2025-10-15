@@ -1,0 +1,34 @@
+:root {
+  /* Primary & Secondary colors */
+  --color-primary: #EC4E02; /* Main brand orange used for accents, buttons, and highlights */
+  --color-primary-rgb: 236, 78, 2; /* RGB values for rgba() usage in gradients and overlays */
+  --color-secondary: #FF6B35; /* Lighter orange accent for secondary highlights */
+
+  /* Text colors */
+  --color-text-primary: #FFFFFF; /* White - main text color for headings and body text */
+  --color-text-secondary: #ABABAB; /* Light gray - nav links, secondary text */
+  --color-text-tertiary: #808080; /* Medium gray - descriptions and subtitles */
+  --color-text-muted: #616161; /* Dark gray - muted content and less important text */
+  --color-text-light: #C7C7C7; /* Very light gray - footer text */
+  --color-text-lighter: #DBDBDB; /* Lightest gray - footer links */
+
+  /* Background colors */
+  --color-bg-primary: #000000; /* Black - main background color */
+  --color-bg-secondary: rgba(117, 117, 117, 0.1); /* Gray with opacity - navbar background */
+  --color-bg-overlay: rgba(236, 78, 2, 0.3); /* Primary with opacity - overlay effects */
+  --color-bg-elevated: rgba(26, 26, 26, 0.9); /* Dark elevated surface - mobile menu, dropdowns */
+
+  /* Border colors */
+  --color-border-primary: #EC4E02; /* Primary borders - main orange for dividers and buttons */
+  --color-border-secondary: rgba(197, 197, 197, 0.3); /* Light gray borders - subtle separators */
+  --color-border-accent: rgba(236, 78, 2, 0.23); /* Primary with low opacity - accent borders */
+  --color-border-subtle: rgba(236, 78, 2, 0.4); /* Primary with medium opacity - subtle borders */
+
+  /* Accent colors */
+  --color-accent-orange: #EC4E02; /* Same as primary for consistency - general accents */
+  --color-accent-glow: rgba(236, 78, 2, 0.5); /* For glow effects and highlights */
+
+  /* Utility colors */
+  --color-white: #FFFFFF; /* Pure white for general use */
+  --color-black: #000000; /* Pure black for general use */
+}

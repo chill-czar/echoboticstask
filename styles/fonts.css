@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("/fonts/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("/fonts/IntegralCF-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FontSpring";
+  src: url("/fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NoContinue";
+  src: url("/fonts/NoContinue.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averno";
+  src: url("/fonts/AvernoDemo.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: "Gilroy-Light", sans-serif;
+  --font-regular: "Gilroy-Regular", sans-serif;
+  --font-medium: "Gilroy-Medium", sans-serif;
+  --font-bold: "Gilroy-Bold", sans-serif;
+  --font-heavy: "Gilroy-Heavy", sans-serif;
+  --font-heading: "FontSpring", sans-serif;
+  --font-display: "Integral CF", sans-serif;
+  --font-decorative: "NoContinue", sans-serif;
+  --font-accent: "Averno", sans-serif;
+}
+
+.font-gilroy {
+  font-family: var(--font-primary);
+}
+
+.font-gilroy-light {
+  font-family: var(--font-primary);
+}
+
+.font-gilroy-regular {
+  font-family: var(--font-regular);
+}
+
+.font-gilroy-medium {
+  font-family: var(--font-medium);
+}
+
+.font-gilroy-bold {
+  font-family: var(--font-bold);
+}
+
+.font-gilroy-heavy {
+  font-family: var(--font-heavy);
+}
+
+.font-fontSpring {
+  font-family: var(--font-heading);
+}
+
+.font-integral {
+  font-family: var(--font-display);
+}
+
+.font-NoContinue {
+  font-family: var(--font-decorative);
+}
+
+.font-Averno {
+  font-family: var(--font-accent);
+}

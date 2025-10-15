@@ -1,10 +1,10 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
-import f1 from "@/public/Feature1.svg";
-import f2 from "@/public/Images/Feature2.png";
-import f3 from "@/public/Images/Feature3.png";
-import f4 from "@/public/Images/Feature4.png";
-import f5 from "@/public/Feature5.svg";
+import f1 from "@/assets/svg/Feature1.svg";
+import f2 from "@/assets/Images/Feature2.png";
+import f3 from "@/assets/Images/Feature3.png";
+import f4 from "@/assets/Images/Feature4.png";
+import f5 from "@/assets/svg/Feature5.svg";
 
 const Features = () => {
   const featureList = [
@@ -41,21 +41,23 @@ const Features = () => {
   ];
 
   return (
-    <section className="relative w-full h-screen justify-center flex flex-col py-20 bg-transparent">
-      {/* Headings */}
-      <div className="mb-16 mx-20 relative">
-        {/* Subheading */}
-        <h4 className="text-[#EC4E02] text-xl font-gilroy mb-2 leading-0">Features</h4>
+    <section className="relative w-full flex flex-col justify-center bg-transparent py-20 sm:py-24 md:py-[200px] px-4 sm:px-10 md:px-20">
+      {/* Header */}
+      <div className="mb-12 md:mb-16 relative">
+        <h4 className="text-[var(--color-primary)] text-lg md:text-xl font-gilroy mb-2 leading-none tracking-[0.22em] uppercase">
+          Features
+        </h4>
 
-        {/* Main Heading */}
-        <h1 className="text-white font-fontSpring text-[70px] leading-20">
-          Experience the <span className="text-[#EC4E02]">Power</span> of <br />
-          Real AI <span className="text-[#EC4E02]">Conversations</span>.
+        <h1 className="text-white font-fontSpring text-[40px] sm:text-[55px] md:text-[70px] leading-tight md:leading-[1.2]">
+          Experience the{" "}
+          <span className="text-[var(--color-primary)]">Power</span> of <br />
+          Real AI{" "}
+          <span className="text-[var(--color-primary)]">Conversations</span>.
         </h1>
       </div>
 
-      {/* Features Grid */}
-      <div className="flex flex-wrap justify-center gap-10">
+      {/* Feature Cards */}
+      <div className="flex flex-wrap justify-center gap-8 md:gap-10">
         {featureList.map((feature, index) => (
           <FeatureCard
             key={index}

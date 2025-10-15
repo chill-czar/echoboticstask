@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import decorativeElement from "@/assets/Images/decorativeElement.jpg";
 
 const PlusMark = () => (
   <svg
@@ -16,75 +17,55 @@ const PlusMark = () => (
   </svg>
 );
 
-export default function BookADemoComponent() {
+export default function BookDemo() {
   return (
-    <div className="py-20">
-      <div className="relative mx-auto max-w-[1611px] h-80 rounded-[30px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
-        {/* 🖼️ LAYER 1: Decorative Background Image (Rectangle 20) */}
+    <div className="pb-[150px] sm:pb-[180px] lg:pb-[200px]">
+      <div className="relative mx-auto max-w-[1611px] h-[400px] sm:h-[450px] lg:h-80 rounded-[30px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+        {/* Decorative Background */}
         <div className="absolute inset-0 z-[1]">
           <Image
-            src="/Images/decorativeElement.jpg"
+            src={decorativeElement}
             alt="Decorative Background"
             fill
             priority
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              borderRadius: "30px",
-            }}
+            className="object-cover object-center rounded-[30px]"
           />
         </div>
 
-        {/* 🟠 LAYER 2: Orange Transparent Overlay (Rectangle 4474) */}
-        <div
-          className="absolute inset-0 z-[2] rounded-[30px]"
-          style={{
-            background: "rgba(236, 78, 2, 0.5)", // EC4E02 at 50% opacity
-            backdropFilter: "blur(25px)", // Matches original CSS
-            WebkitBackdropFilter: "blur(25px)",
-          }}
-        />
+        {/* Orange Blur Overlay */}
+        <div className="absolute inset-0 z-[2] rounded-[30px] bg-[var(--color-accent-glow)] backdrop-blur-[25px] [--tw-backdrop-blur:blur(25px)]" />
 
-        {/* 🌫️ LAYER 3: Blur Image with Soft Light Blend (Image 25) */}
-        <div
-          className="absolute inset-0 z-[3] rounded-[30px] mix-blend-soft-light opacity-20 rotate-180"
-          style={{
-            transform: "rotate(180deg)",
-          }}
-        >
+        {/* Soft Light Blur Layer */}
+        <div className="absolute inset-0 z-[3] rounded-[30px] mix-blend-soft-light opacity-20 rotate-180">
           <Image
-            src="/Images/Blur.png"
+            src="/assets/Images/Blur.png"
             alt="Blur Overlay"
             fill
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              borderRadius: "30px",
-            }}
+            className="object-cover object-center rounded-[30px]"
           />
         </div>
 
-        {/* ➕ Corner Plus Marks */}
+        {/* Plus Marks on Corners */}
         {[
-          "top-6 left-6",
-          "top-6 right-6",
-          "bottom-6 left-6",
-          "bottom-6 right-6",
+          "top-4 left-4 sm:top-6 sm:left-6",
+          "top-4 right-4 sm:top-6 sm:right-6",
+          "bottom-4 left-4 sm:bottom-6 sm:left-6",
+          "bottom-4 right-4 sm:bottom-6 sm:right-6",
         ].map((pos, i) => (
           <div key={i} className={`absolute ${pos} z-[4]`}>
             <PlusMark />
           </div>
         ))}
 
-        {/* ✨ Content */}
-        <div className="absolute inset-0 z-[5] flex flex-col items-center justify-center text-center px-4">
-          <h2 className="font-gilroy-regular text-white text-[60px] leading-[114%] max-w-[969px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
+        {/* Main Content */}
+        <div className="absolute inset-0 z-[5] flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="font-gilroy-regular text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight lg:leading-[114%] max-w-[969px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
             See real AI conversations in action.
-            <br />
+            <br className="hidden sm:block" />
             book your demo today.
           </h2>
 
-          <button className="mt-8 w-[265px] h-[60px] rounded-[12px] bg-white text-black text-[24px] font-gilroy-regular hover:bg-gray-100 transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
+          <button className="mt-6 sm:mt-8 w-[220px] sm:w-[240px] lg:w-[265px] h-[50px] sm:h-[55px] lg:h-[60px] rounded-[12px] bg-white text-black text-lg sm:text-xl lg:text-[24px] font-gilroy-regular hover:bg-gray-100 transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
             Book a Demo
           </button>
         </div>
